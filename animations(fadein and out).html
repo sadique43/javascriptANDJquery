@@ -1,0 +1,62 @@
+<html>
+<head>
+<script type="text/javascript">
+var opacityval=0;
+var intervalid=0;
+var id=0;
+function fadein()
+{
+var img=document.getElementById("image");
+opacityval=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+if(opacityval>0)
+{
+opacityval=opacityval-0.1;
+img.style.opacity=opacityval;
+}
+else{
+alert("Task Completed::::>Image completly fade in");
+clearInterval(id);
+}
+}
+
+function fadeout()
+{
+
+var img=document.getElementById("image");
+
+if(opacityval<=1)
+{
+opacityval=opacityval+0.1;
+img.style.opacity=opacityval;
+}
+else{
+alert("Task Completed::::>Image completly fade out");
+clearInterval(id);
+}
+}
+
+function start()
+{
+
+id=window.setInterval(fadein,30);
+}
+function stop()
+{
+
+
+id=window.setInterval(fadeout,30);
+}
+
+
+
+
+</script>
+</head>
+<body>
+<button onclick="start()" >Fade In</button><br><br>
+
+<img src="city.jpg" width="300" id="image"/><br><br>
+<button onclick="stop()" id="btn2">Fade Out</button>
+
+</body>
+</html>

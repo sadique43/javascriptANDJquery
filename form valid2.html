@@ -1,0 +1,48 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+var username=document.getElementById("uname");
+var password=document.getElementById("pass");
+if(username.value.trim()=="" )
+{
+
+alert("blank user name");
+document.getElementById("label1").style.visibility="visible";
+uname.style. border="solid 3px red";
+return false;
+}
+else if(password.value.trim()=="" )
+{
+alert("blank password");
+return false;
+}
+else if(password.value.trim().length<5)
+{
+alert("the password value is too short");
+pass.style.border="3px solid red";
+return false;
+}
+else{
+return true;
+}
+
+}
+
+
+</script>
+
+
+</head>
+<body>
+<form onsubmit="return validate()" action="message.html">
+
+<input type="text" id="uname" placeholder="Username" >
+<label id="label1" style="visibility:hidden;color:red;">Invalid</label><br><br>
+<input id="pass" type="password" name="pass" placeholder="password"><br><br>
+<button  type="submit">Submit</button>
+</form>
+
+</body>
+</html>

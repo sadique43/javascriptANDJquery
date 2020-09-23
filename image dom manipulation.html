@@ -1,0 +1,20 @@
+<html>
+<head>
+
+<script type="text/javascript">
+//mouseover and mouseout event
+function setnewimage()
+{
+document.getElementById("img1").src="iter.png";
+}
+function setoldimage()
+{
+document.getElementById("img1").src="city.jpg";
+}
+</script>
+
+</head>
+<body>
+<img id="img1" onmouseover="setnewimage()" onmouseout="setoldimage()" src="city.jpg" width="300"/ >
+</body>
+</html>

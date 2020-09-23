@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+//get element by tag name
+function buttonclick()
+{
+var s=document.getElementsByTagName("p");
+/*s[0].style.fontSize=25;
+s[1].style.color="red";
+s[2].style.fontWeight="bold";*/
+//document.write(s.length);
+for(var i=0;i<s.length;i++)
+{
+s[i].style.fontSize=22;
+}
+}
+
+</script>
+</head>
+<body>
+<p>Hello i am sadique</p>
+<p>How are you</p>
+<p>Nice to meet you!</p>
+<button onclick="buttonclick()">click me</button>
+
+</body>
+</html>

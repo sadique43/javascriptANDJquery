@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript">
+var id=0;
+var sec=0;
+
+
+
+function printmsg()
+{
+document.getElementById("op").innerHTML=sec+" seconds";
+sec++;
+}
+function start()
+{
+id=window.setInterval(printmsg,1000);
+document.getElementById("label1").style.visibility="visible";
+
+
+}
+function stop()
+{
+var ans=document.getElementById("answer").value;
+var reg1=/(roses)/;
+var reg2=/(blue)/;
+if(sec<=5 && reg1.test(ans))
+{
+document.getElementById("op").innerHTML="You won the game";
+window.clearInterval(id);
+alert("correct answer is:"+ans);
+document.getElementById("op").clear;
+document.getElementById("label2").style.visibility="visible";
+
+
+
+}
+else
+{
+document.getElementById("op").innerHTML="You lost the game!";
+window.clearInterval(id);
+}
+}
+
+
+</script>
+</head>
+<body>
+<b><u>General Instructions to the game:</u></b>
+<h2 id="op" >> click the start button<br>>then answer the question within 5sec to win the game<br>>after answering click stop</h2>
+<button onclick="start()" id="btnadd">Start</button>
+<label1 id="label1" >_____ are red.</label1><br>
+<label1 id="label2" >_____ are blue.</label2><br>
+
+<input type="text" id="answer" placeholder="Answer here">
+<br>
+<button onclick="stop()" id="btnstop">End</button>
+<!--<h2 id="op1" style="visibility:hidden;">You Won The Game!!!</h2>-->
+</body>
+</html>

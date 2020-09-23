@@ -1,0 +1,53 @@
+<html>
+<head>
+<script id="text/javascript">
+var width=100;
+var diff=2;
+var id=0;
+function zoomin()
+{
+if(width<500)
+{
+width=width+diff;
+document.getElementById("img1").style.width=width;
+console.log(width);
+}
+else
+{
+clearInterval(id);
+
+}
+}
+function zoomout()
+{
+if(width>100)
+{
+width=width-diff;
+document.getElementById("img1").style.width=width;
+console.log(width);
+}
+else
+{
+clearInterval(id);
+}
+}
+function increase()
+{
+clearInterval(id);
+id=window.setInterval(zoomin,20);
+}
+function decrease()
+{
+clearInterval(id);
+id=window.setInterval(zoomout,20);
+}
+
+</script>
+
+</head>
+<body>
+<br>
+<br>
+<img id="img1" onmouseover="increase()" onmouseout="decrease()" src="iter.png" width="100"/>
+</body>
+</html>

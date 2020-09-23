@@ -1,0 +1,33 @@
+<html.
+<head>
+<script type="text/javascript">
+function clickget()
+{
+var s=document.getElementsByClassName("para");
+s[0].style.color="red";
+for(var i=0;i<s.length;i++)
+{
+if(i%2==0)
+{
+s[i].style.color="green";
+}
+else
+{
+s[i].style.color="red";
+}
+s[i].style.fontSize=70;
+s[4].style.textDecoration="none";
+}
+
+}
+</script>
+</head>
+<body>
+<p class="para">Hi How are you</p>
+<p class="para">No No no</p>
+<p class="para">bye bye</p>
+<p class="para">Bhag yaha se</p>
+<a class="para" href="#">ShayariYouth</a>
+<button onclick="clickget()">Click me</button>
+</body>
+</html>

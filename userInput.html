@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+function buttonclick()
+{
+var str=document.getElementById("text1").value;
+var str2=document.getElementById("text2").value;
+alert("the value inside the box:"+str+" " +str2);
+var str3=document.getElementById("selectbox");
+alert(str3.options[str3.selectedIndex].value);
+}
+
+</script>
+</head>
+<body>
+<input id="text1" placeholder="Enter Anything">
+<br>
+
+<input type="radio" value="male" id="text2">Male</input>
+<br>
+<br>
+<select id="selectbox" >
+<option value="shayari youth">Shayari youth</option>
+<option value="eduviq">eduviq</option>
+</select>
+<button id="btn1" onclick="buttonclick()">click me</button>
+</body>
+</html>

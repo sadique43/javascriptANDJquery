@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+function cars(car_model,car_brand,car_price)//obj coreation using constructor
+{
+this.car_model=car_model;//this keyword is use to refer to the current variable
+this.car_brand=car_brand;
+this.car_price=car_price;
+this.teslautopilot=function()
+{
+document.write("auto pilot feature");
+}
+}
+var c1=new cars("1","tesla",35000);//here c1 is name of the object
+document.write(c1.car_model+c1.car_brand+c1.car_price);
+c1.fuel="petrol";//we can add another variable to the constructor outside also
+document.write(c1.fuel);
+//var str1=new String();
+/*function s()
+{
+}
+var stri="sad";
+var i=2;
+document.write(typeof(s));
+document.write(typeof(stri));
+document.write(typeof(i));*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

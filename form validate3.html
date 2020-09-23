@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+function validate()
+{
+var uname=document.getElementById("username").value;
+//var reg=/[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+//var reg=/[7-9]\d{9}/;
+var reg=/^([a-zA-Z0-9\.-]+)(@+)([a-zA-Z]+)(\.?)([a-zA-Z]{2,20})(.[a-z]+)$/
+if(reg.test(uname))
+{
+alert("correct info bro!!!");
+return true;
+}
+else
+{
+alert("wrong information");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form onsubmit="return validate()" action="message.html">
+<input type="text" id="username" placeholder="Username"><br><br>
+<button type="submit">submit</button>
+</form>
+
+</body>
+</html>

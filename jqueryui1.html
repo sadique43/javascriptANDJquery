@@ -1,0 +1,42 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+<link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+<link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+<style>
+.dateinput{
+color:black;
+
+}
+#mydiv input{
+width:50%;
+}
+</style>
+
+</head>
+<body>
+
+<div id="mydiv">
+<h3>introduction to jQuery UI</h3>
+<input id="dateinput" type="text"  placeholder="click here to select the date" />
+<img src="city.jpg" width="300px" height="300px" title="city">
+</div>
+</body>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+<script>
+$("#dateinput").datepicker({
+numberOfMonths:1,changeYear:true,changeMonth:true,showDay:true,minDate: new Date (2017,0,1),maxDate: new Date (2020,0,1)
+});
+$("img").tooltip({
+track:true,
+content:'hello',
+show:{effect:"blind",duration:3000},
+hide:{effect:"explode",duration:3000}
+//show:{effect:"highlight",duration:10000}
+//show:{effect:"pulsate",duration:10000}
+//show:{effect:"bounce",duration:10000}
+});
+</script>
+</html>
